@@ -1,0 +1,212 @@
+/* pages/shopcar/shopcar.wxss */
+page{
+  background-color: #e7e6e6;
+}
+.checkallview{
+  margin-top: 6rpx;
+  position: relative;
+  background-color: #fff;
+  height: 70rpx;
+}
+.checkview{
+  margin-top: 10rpx;
+  position: relative;
+  border-bottom: 8rpx solid #fff;
+}
+.checkdel{
+  float: right;
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 30rpx;
+}
+.checkbox checkbox{
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  z-index: 2222;
+  opacity: .1
+}
+.checkTrue,
+.checkFalse{
+  position: absolute;
+  left: 8rpx;
+  top: 10rpx;
+  width: 44rpx;
+  height: 44rpx;
+}
+.checkFalse image,
+.checkTrue image{
+  width: 100%;
+  height: 100%;
+}
+.checkview-right{
+  float: right;
+ width: 700rpx;
+}
+
+/*复制  */
+.contentel_top_r{
+  padding:20rpx 30rpx 15rpx 15rpx;
+}
+.conten_shopfix{
+  position: fixed;
+  right: 10rpx;
+  bottom: 130rpx;
+}
+.conten_shopfix text{
+  min-width: 28rpx;
+  padding: 0 6rpx;
+  height: 28rpx;
+  font-size: 20rpx;
+  background: #FB3D3D;
+  border-radius: 100%;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+}
+.conten_shopfix image{
+  width: 104rpx;
+  height: 104rpx;
+}
+.contentel_top_r .contentel_top_rl{
+  width: 152rpx;
+  height: 152rpx;
+  float: left;
+}
+.contentel_top_r .contentel_top_rr{
+  margin-left: 172rpx;
+}
+.contentel_top_rr .conten_top_rr_1{
+    font-size: 36rpx;
+    text-align: left;
+}
+.contentel_top_rr .conten_top_rr_2{
+    font-size: 24rpx;
+    text-align: left;  
+}
+.contentel_top_rr .conten_top_rr_2 image{
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+}
+.contentel_top_rr .conten_top_rr_2 text{  
+  margin: 1rpx 0 0 10rpx;
+}
+.contentel_top_rr .conten_top_rr_3{
+    font-size: 44rpx;
+    text-align: left;
+    margin-top: 30rpx;
+    color: #FB3D3D ;
+}
+.conten_top_3r image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.conten_top_3r{
+  float: right;
+  font-size: 30rpx;
+  margin-top: 8rpx;
+}
+.conten_top_3r.zeroHidden .conten_jian,
+.conten_top_3r.zeroHidden text
+{
+  display: none;
+}
+.conten_top_3r text{
+  float: left;
+  margin: 0 10rpx;
+}
+.conten_jian,
+.conten_jia{
+  width: 55rpx;
+  height: 55rpx;
+  float: left;
+}
+.contentel_top_r .contentel_top_rl image{
+  width: 100%;
+  height: 100%;
+}
+.shicai_r{
+  width: 100%;
+}
+/* .shicai_r image{
+  width: 100%;
+} */
+/* .contente {
+  background-color: white;
+  margin-bottom: 20rpx;
+  border-bottom: 1px solid  #F3F3F3 ;
+}
+.contente .contentel {
+  float: left;
+  width: 200rpx;
+  height: 140rpx;
+  background-color: pink;
+  background-size: 100%;
+  margin: 20rpx 10rpx  20rpx 20rpx;
+}
+.contente .contentel image{
+  width: 100%;
+  height: 100%;
+}
+.contente .contentel  .bac_img{
+  width: 100%;
+  height: 100%;
+}
+.contente .contentec .ul {
+  margin-top: 30rpx;
+  line-height: 50rpx;
+}
+.contente .contentec .ul .li:first-child {
+  font-size: 28rpx;
+  line-height: 32rpx;
+  color: #333333;
+  width: 375rpx;
+  position: relative;
+}
+.contente .contentec .ul .ulC {
+  margin-top: 15rpx;
+  font-size: 20rpx;
+  height: 25rpx;
+  line-height: 18rpx;
+  color: #9b9b9b;
+}
+.contente .contentec .ul .ulC .span:last-child {
+  margin-left: 30rpx;
+}
+.contente .contentec .ul .li:last-child {
+  margin-top: 15rpx;
+  font-size: 17rpx;
+  height: 18rpx;
+  line-height: 20rpx;  
+}
+.contente .contentec .ul .li:last-child text{
+  color: #DB1F57;
+  font-size: 26rpx;
+}
+.contente .contenter {
+  float: right;
+  width: 120rpx;
+  height: 180rpx;
+  background-color: #009ba1;
+  text-align: center;
+}
+.contente .contenter .contenterC {
+  width: 52rpx;
+  height: 43rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+  color: white;
+  text-align: center;
+  font-size: 43rpx;
+}
+.contente .contenter .contenterC image{
+  width: 100%;
+  height: 100%
+}
+.contente .contenter .p {
+  font-size: 24rpx;
+  color: #333333;
+} */

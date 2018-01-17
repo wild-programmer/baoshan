@@ -1,0 +1,91 @@
+
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">轻食菜单</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">食材简介</view>
+</view>
+<view class="swiper-tab-temp"></view>
+<view>
+  <swiper current="{{currentTab}}" autoplay="{{false}}" class="swiper-box" duration="300" style="height:400px" bindchange="bindChange">
+    <swiper-item style="background-color:red">
+        <block wx:for="{{imgUrls}}">
+        <!--红色内容-->
+            <swiper-item>
+                <scroll-view scroll-y class="contentel_l"  bindtouchmove="scroll_viewr" style="height: 400rpx;width:208rpx"                bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="red" scroll-top="100">
+
+                    <block wx:for="{{user.pd_cont}}" >
+                        <view class="contentel_top">
+                        <rich-text type="a" href="#f1">{{item.name}}</rich-text> 
+                        </view>
+                    </block>  
+
+                </scroll-view>
+
+                <scroll-view scroll-y class="contentel_r" style="height: 400rpx;width:540rpx" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="red" scroll-top="100">
+
+                    <block wx:for="{{pd_list}}">
+                        <view class="contentel_top_r">
+                        <image src="{{item.thumbs[0].medium.url}}"></image>
+                        </view>
+                    </block>  
+
+                </scroll-view>
+            </swiper-item>
+        </block>
+    </swiper-item>
+    <swiper-item style="background-color:green">
+      绿色内容
+    </swiper-item>
+  </swiper>
+</view>
+<!--原本的面目-->
+<!--
+ <scroll-view scroll-y style="height: 800rpx;"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="red" scroll-top="100">
+<block wx:for="{{pd_list}}">
+  <view class="contente clearfix" bindtap="handleTap">
+        <view class="contentel">
+          <image src="{{item.thumbs[0].medium.url}}"></image>
+        </view>
+-->
+        <!--1-->
+<!--
+        <view wx:if="{{item.display_style == 10001}}">
+          <view class="contenter">
+              <view class="contenterC">
+                    <image src="../../images/shalou.png"></image>
+              </view>
+              <view class="p">待付款</view>
+          </view>
+        </view>
+-->
+        <!--2-->
+<!--
+        <view wx:if="{{item.display_style == 10002}}">
+          <view class="contenter" style="background-color:#DB1F57">
+              <view class="contenterC">
+                  <image src="../../images/qianicon.png"></image>
+              </view>
+              <view class="p">已购票</view>
+          </view>
+         </view>
+-->
+        <!--3-->
+<!--
+        <view wx:if="{{item.display_style == 10003}}">
+          <view class="contenter" style="background-color:#dfdfdf" bindtap="tapName">
+              <view class="contenterC">
+                  <image src="../../images/qianicon.png"></image>
+              </view>
+              <view class="p">已完成</view>
+          </view>
+        </view>
+        <view class="contentec">
+            <view class="ul">
+                <view  class="txt_cut li">{{item.abstract}}</view >
+                <view  class="ulC li"><text class=" span">{{item.address}}</text> <text class="span">{{item.time}}</text></view >
+
+            </view>
+        </view>
+    </view>
+    </block>     
+    </scroll-view>
+-->

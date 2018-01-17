@@ -1,0 +1,74 @@
+<!--pages/shopcar/shopcar.wxml-->
+<view class='body'>
+  <!--bindchange="checkboxChange"  -->
+  <checkbox-group>
+    <!-- wx:key="items" -->
+    <label class="checkbox" wx:for="{{items}}" wx:key="items">
+      <block wx:if="{{item.name=='all'}}">
+        <!--显示全选  -->
+        <view class='checkallview'>
+          <checkbox value="{{item.name}}" data-tag="{{index}}" checked="{{item.checked}}" bindtap='allckeckd' />{{item.value}}
+          <!--选中状态  -->
+          <block wx:if="{{item.checked==true}}">
+            <view class='checkTrue'>
+              <image src='../../images/check.png'></image>
+            </view>
+          </block>
+          <!--取消选中  -->
+          <block wx:else>
+            <view class='checkFalse'>
+              <image src='../../images/checkno.png'></image>
+            </view>
+          </block>
+          <!--删除全部  -->
+          <image class='checkdel' src='../../images/delelt.png' bindtap='deletall'></image>
+        </view>
+      </block>
+      <block wx:else>
+        <!--多选按钮  -->
+        <view class='checkview clearfix'>
+          <checkbox value="{{item.name}}" data-tag="{{index}}" checked="{{item.checked}}" bindtap='tageckeckd' />
+          <!--选中状态  -->
+          <block wx:if="{{item.checked==true}}">
+            <view class='checkTrue'>
+              <image src='../../images/check.png'></image>
+            </view>
+          </block>
+          <!--取消选中  -->
+          <block wx:else>
+            <view class='checkFalse'>
+              <image src='../../images/checkno.png'></image>
+            </view>
+          </block>
+          <!--购物车右边介绍view  -->
+          <view class='checkview-right'>
+            <view class="contentel_top_r clearfix" bindtap='navigator'>
+              <view class='contentel_top_rl'>
+                <image src="{{item.url}}"></image>
+              </view>
+              <view class='contentel_top_rr' hover-stop-propagation='true'>
+                <view class='conten_top_rr_1'>当归骨头煲</view>
+                <view class='conten_top_rr_2'>
+                  <image src='{{item.url}}'></image>
+                  <text style='display:inline-block'>强身健体</text>
+                </view>
+                <view class='conten_top_rr_3' hover-stop-propagation='{{true}}'>
+                  <view class="conten_top_3r ">
+                    ￥0.01
+                  </view>
+                  <text>x1</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </label>
+  </checkbox-group>
+</view>
+<block wx:for="{{pd_list}}" wx:key="pd_list">
+  <!-- 这里面是点击菜品进详情 -->
+  <!-- <navigator url="../xq/xq?itemIdx={{item.itemIdx}}" hover-stop-propagation='true'> -->
+
+  <!-- </navigator> -->
+</block>

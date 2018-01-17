@@ -1,0 +1,10 @@
+<!--pages/dz.wxml-->
+<input type='text' placeholder="搜索" catchtouchend="getLocation" ></input> <button size='mini'>搜索</button>
+<view>{{name}}</view>
+<view>latitude{{latit}}</view>
+<view>longitude{{long}}</view>
+<view>location:{{location}}</view>
+<view>pagePath:{{pagePath}}</view>
+<view>pageOptions:{{pageOptions}}</view>
+
+

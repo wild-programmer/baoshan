@@ -1,0 +1,74 @@
+<view>
+  <view class='getLand' bindtap='getLand'><image src='../../images/location.png'></image> 静安店</view>
+</view>
+
+<!-- 扫码 -->
+<button size="mini" plain="true" id='btn' bindtap="saoma" >扫码</button>
+<!-- 扫码 -->
+<!-- 菜品导航 -->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">轻食菜单</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">食材简介</view>
+</view>
+<view class="swiper-tab-temp"></view>
+<view>
+  <swiper current="{{currentTab}}" autoplay="{{false}}" class="swiper-box" duration="300" style="height:293px" bindchange="bindChange">
+    <swiper-item style="background-color:">
+        <block>
+        <!--轻食菜单--> 
+              <scroll-view scroll-y class="contentel_l"  bindtouchmove="scroll_viewr" style="width:208rpx;height: 100%" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="red">                   
+                    <block wx:for="{{user.pd_cont}}" wx:key="user.pd_cont" >                        
+                        <view class="contentel_top {{cont_topbac==item.len ? 'oncont_seclt' : ''}}" data-topbac="{{item.len}}" bindtap="bondIcontap">
+                            <view type="success" class='conten_icon'>
+                              <image lazy-load='true' src="{{cont_topbac==item.len ? '../../images/cont_icon.png' : '../../images/cont_icon11.png'}}"></image>
+                            </view>
+                            {{item.name}}
+                        </view>
+                    </block> 
+                </scroll-view>
+
+                <scroll-view scroll-y class="contentel_r" style="height:100%;width:540rpx" bindscrolltoupper="upper" bindscrolltolower="lower">
+                    <!-- fix购物车 -->
+                    <view class='conten_shopfix' bindtap='shopcarnav'>
+                      <text>{{cainum}}</text>
+                      <image src='../../images/shop.png'></image>
+                    </view>
+                    <block wx:for="{{pd_list}}" wx:key="pd_list">
+                        <!-- 这里面是点击菜品进详情 -->
+                        <!-- <navigator url="../xq/xq?itemIdx={{item.itemIdx}}" hover-stop-propagation='true'> -->
+                          <view class="contentel_top_r clearfix"   bindtap='navigator'>
+                            <view class='contentel_top_rl'>                                  
+                              <image src="{{item.url}}"></image>
+                            </view>
+                            <view class='contentel_top_rr' hover-stop-propagation='true'>
+                              <view class='conten_top_rr_1'>当归骨头煲</view>
+                              <view class='conten_top_rr_2'><image src='{{item.url}}'></image> <text style='display:inline-block'>强身健体</text></view>
+                              <view class='conten_top_rr_3'  hover-stop-propagation='{{propagation}}'> 
+                                <view class="conten_top_3r {{(item.selctnum>0) ? '' : 'zeroHidden'}}">
+                                  <!-- 减单按钮 -->
+                                  <view class='conten_jian' >
+                                      <image src='../../images/reduce.png' data-itemIdx ='{{item.itemIdx }}' catchtap='taggelreduce'></image>
+                                  </view>
+                                  <text>{{item.selctnum}}</text> 
+                                  <!-- 添加按钮 -->
+                                  <view class='conten_jia'    >
+                                      <image src='../../images/add.png' catchtap='taggelAdd'  data-itemIdx ='{{item.itemIdx }}' ></image>
+                                  </view> 
+                                </view> 
+                                <text>￥34</text>                                    
+                              </view>
+                            </view>                  
+                          </view>
+                        <!-- </navigator> -->
+                    </block>  
+                </scroll-view>
+        </block>
+    </swiper-item>
+    <swiper-item >
+      <!-- 食材简介 -->
+      <scroll-view scroll-y class="shicai_r"  bindtouchmove="scroll_viewr" style="height: 100%;width:100%"  scroll-top="100">
+            <image mode='widthFix'  src='../../images/xqing.png'></image>
+      </scroll-view>    
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/dz/dz",
+    "pages/xq/xq",
+    "pages/shopcar/shopcar",
+    "pages/user/user",
+    "pages/qz/qz"
+  ],
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "pink",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/yyang.png",
+        "selectedIconPath": "images/yyang_d.png"
+      },
+      {
+        "pagePath": "pages/qz/qz",
+        "text": "订单",
+        "iconPath": "images/dingd3.png",
+        "selectedIconPath": "images/dingd_d.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me_d.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "宝善轻食",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
+  }
+}

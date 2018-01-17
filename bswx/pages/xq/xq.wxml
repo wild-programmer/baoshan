@@ -1,0 +1,36 @@
+<!--pages/xq/xq.wxml-->
+<image src='../../upload/xq.png'></image>
+<view class='center'>
+ 
+
+</view> 
+
+
+<view class='xq-fix'>
+  <view class="phone_one" bindtap="clickPerson">
+    <view class="phone_personal">{{firstPerson}}</view>
+    <image src="../../image/add.png" class="personal_image {{selectArea ? 'rotateRight' :''}}"></image>
+  </view>
+  <view class="person_box">
+  <!-- hidden="{{selectPerson}}" -->
+    <view class="phone_select {{selectPerson}}" >
+      <view class='select_top clearfix'></view>
+      <block wx:for="{{pd_list}}" wx:key="pd_list">
+           <!-- {{(item.selctnum>0) ? '' : 'zeroHidden'}} -->
+        <view class="select_one clearfix {{(item.selctnum>0) ? '' : 'zeroHidden'}}">
+          <text>参北虫草炖乳鸽{{item.itemIdx }}inum:{{item.selctnum}}</text>
+            <view class="conten_top_3r" >
+                <text style='margin-right:40rpx'>￥56.5</text>
+                <view class='conten_jian' >
+                    <image src='../../images/reduce.png' data-itemIdx ='{{item.itemIdx }}' bindtap='taggelreduce'></image>
+                </view>
+                <text>{{item.selctnum}}</text> 
+                <view class='conten_jia'>
+                  <image src='../../images/add.png'  data-itemIdx ='{{item.itemIdx }}' bindtap='taggelAdd'></image>
+                </view> 
+            </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
